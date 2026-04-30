@@ -220,32 +220,6 @@ Monitoramento  │ 20-50% scores   │ ~15-25%
 Normal         │ Bottom 50%      │ ~5-10%
 ```
 
-### 2. **Implementação em Produção**
-
-- ✓ Modelo serializado: `models/modelo_churn_v1.pkl`
-- ✓ Aplicar **no final de cada safra** para scoring de usuários novos
-- ✓ Atualizar modelo a cada **3-6 meses** com dados novos
-- ✓ Monitorar **drift** (mudanças em padrões ao longo do tempo)
-
-### 3. **Validação Contínua**
-
-```python
-# Retraining schedule
-- Semanal: Monitorar performance OOT
-- Mensal: Atualizar dataset com nova safra
-- Trimestral: Revalidar com novos dados
-- Semestral: Avaliar retrain necessário
-```
-
-### 4. **Próximos Passos**
-
-- [ ] Testar ensemble (Gradient Boosting, XGBoost)
-- [ ] Feature engineering para melhorar AUC
-- [ ] Implementar SHAP para interpretabilidade
-- [ ] A/B testing de campanha de retenção
-- [ ] Automatizar pipeline (Airflow/DBT)
-- [ ] Dashboard de monitoramento em tempo real
-
 ---
 
 ##  Como Executar
@@ -284,15 +258,6 @@ semma.ipynb
 
 ---
 
-##  Suporte & Documentação
-
-- **Metodologia SEMMA:** Enterprise Miner (SAS) methodology
-- **Random Forest:** Breiman (2001)
-- **Validação:** Best practices em ML
-- **Ferramenta:** Scikit-learn 0.24+
-
----
-
 ##  Resumo Executivo
 
 | Aspecto | Status |
@@ -304,7 +269,3 @@ semma.ipynb
 | **Pronto para Produção** | ✓ Sim |
 
 **Conclusão:** Modelo validado, robusto e pronto para implementação. Esperamos capturar **75% do churn** focando em apenas **20% da base de usuários**.
-
----
-
-**Data:** 30 de Abril de 2026 | **Versão:** v1.0 | **Status:** ✓ Finalizado
